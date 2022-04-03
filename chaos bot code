@@ -1,0 +1,28 @@
+// Servo - Version: Latest 
+#include <Servo.h>
+
+Servo s1;
+Servo s2;
+
+int p=0;
+void setup() {
+    s1.attach(11);
+    s1.write(180);
+}
+
+void loop() {
+ for(p=0;p<180;p++)
+    {
+      s1.write(p);
+      delay(10);
+      
+    }   
+
+for(p=180;p>0;p--)
+    {
+      s1.write(p);
+
+      delay(10);
+      
+    }   
+}
